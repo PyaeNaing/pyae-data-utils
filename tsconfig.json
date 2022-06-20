@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "lib": ["es2015", "dom"],
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noImplicitAny": true,
+  },
+  "include": ["src/**/*"]
+}
