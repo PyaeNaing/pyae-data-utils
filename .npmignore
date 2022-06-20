@@ -1,5 +1,5 @@
 # standard ignore
 node_modules/
-
+coverage/
 # ignore test folder
 test/
