@@ -11,6 +11,7 @@ module.exports = {
       name: "pyae-data-utils",
       type: "umd",
     },
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -24,5 +25,5 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
-  devtool: "source-map",
+  devtool: "inline-source-map",
 };

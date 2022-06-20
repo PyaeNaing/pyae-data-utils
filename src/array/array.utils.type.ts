@@ -1,19 +1,16 @@
+export interface IFilters {
+  [key: string]: {
+    values: string[];
+  };
+}
 export interface IFilterArray {
   data: object[];
-  filters: {
-    [key: string]: {
-      values: string[];
-    };
-  };
+  filters: IFilters;
 }
 
 export interface INarrowArray {
   data: object[];
-  contains: {
-    [key: string]: {
-      values: string[];
-    };
-  };
+  contains: IFilters;
 }
 
 export interface IReplaceNullWithValue {

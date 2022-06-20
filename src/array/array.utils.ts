@@ -5,9 +5,9 @@ import { IFilterArray, INarrowArray, IReplaceNullWithValue } from "./array.utils
  * This return the array that contains the data in narrow
  * @param {data} data The array of data
  * @param {contains} contains The object that contains the data you wish to filter
- * @returns {data} Modified Data
+ * @returns {data} data Modified Data
  */
-export const filterArray = ({ data, filters }: IFilterArray) => {
+export const filterObjectArray = ({ data, filters }: IFilterArray) => {
   return data.filter((item: any) => {
     for (const fKey in filters) {
       if (filters[fKey]?.values?.some((val: string) => item[fKey] === val))
@@ -18,13 +18,13 @@ export const filterArray = ({ data, filters }: IFilterArray) => {
 };
 
 /**
- * This function is to narrow down unwanted data from array
+ * This function is to narrow down data from array to show the one you desires
  * This return the array that contains the data in narrow
  * @param {data} data The array of data
  * @param {contains} contains The object that contains the data you wish to keep
- * @returns {data} Modified Data
+ * @returns {data} data Modified Data
  */
-export const narrowArray = ({ data, contains }: INarrowArray) => {
+export const narrowObjectArray = ({ data, contains }: INarrowArray) => {
   return data.filter((item: any) => {
     for (const fKey in contains) {
       if (!contains[fKey]?.values?.some((val: string) => item[fKey] === val))
