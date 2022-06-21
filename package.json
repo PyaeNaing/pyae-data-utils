@@ -1,6 +1,6 @@
 {
   "name": "pyae-data-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "useful utils for data manipulation",
   "source": "src/index.ts",
   "main": "dist/index.js",
