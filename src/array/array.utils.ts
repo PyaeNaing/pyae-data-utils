@@ -21,7 +21,7 @@ export const filterObjectArray = ({ data, filters }: IFilterArray) => {
  * This function is to narrow down data from array to show the one you desires
  * This return the array that contains the data in narrow
  * @param {data} data The array of data
- * @param {contains} contains The object that contains the data you wish to keep 
+ * @param {contains} contains The object that contains the data you wish to keep
  * If contains have multiple key, it will only return objects that contains all of key values.
  * @returns {data} Modified Data
  */

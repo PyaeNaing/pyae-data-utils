@@ -24,7 +24,6 @@ describe("testing array utils", () => {
   });
 
   test("it should return objects that contains the filter", () => {
-    console.log('.. \n', narrowObjectArray({ data, contains: filters }))
     expect(narrowObjectArray({ data, contains: filters })).toEqual([
       {
         name: "name5",

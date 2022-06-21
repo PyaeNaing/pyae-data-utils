@@ -1,29 +1,29 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.ts"),
+  entry: path.resolve(__dirname, './src/index.ts'),
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
     clean: true,
-    globalObject: "this",
+    globalObject: 'this',
     library: {
-      name: "pyae-data-utils",
-      type: "umd",
+      name: 'pyae-data-utils',
+      type: 'umd'
     },
-    umdNamedDefine: true,
+    umdNamedDefine: true
   },
   module: {
     rules: [
       {
-        test: /\.(ts)$/,
+        test: /\.(ts|js)$/,
         exclude: /node_modules/,
-        use: ["ts-loader"],
-      },
-    ],
+        use: ['babel-loader', 'ts-loader']
+      }
+    ]
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js']
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map'
 };
