@@ -1,10 +1,6 @@
+export { IFilters } from "./array/array.utils.type";
 export {
-  IFilterArray,
-  INarrowArray,
-  IReplaceNullWithValue,
-} from "./array/array.utils.type";
-export {
-  filterArray,
-  narrowArray,
+  filterObjectArray,
+  narrowObjectArray,
   replaceNullWithValue,
 } from "./array/array.utils";
