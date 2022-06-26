@@ -1,6 +1,6 @@
 {
   "name": "pyae-data-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "useful utils for data manipulation",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -16,6 +16,10 @@
   },
   "author": "Pyae Naing",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PyaeNaing/pyae-data-utils"
+  },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
