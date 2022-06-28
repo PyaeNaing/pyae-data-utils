@@ -1,4 +1,8 @@
-import { IFilterArray, INarrowArray, IReplaceNullWithValue } from "./array.utils.type";
+import {
+  IFilterArray,
+  INarrowArray,
+  IReplaceNullWithValue
+} from './array.utils.type';
 
 /**
  * This function is to filter unwanted data from array
@@ -37,18 +41,28 @@ export const narrowObjectArray = ({ data, contains }: INarrowArray) => {
 
 /**
  * This function will replace empty values inside the objects
- * @param {object} object The object you wish to modify
+ * @param {object} object The object / array of object you wish to modify
  * @param {value} value This value you will replace with
  */
 export const replaceNullWithValue = ({
   object,
-  value,
+  value
 }: IReplaceNullWithValue) => {
-  if (!(object && value)) return;
-  Object.keys(object).forEach((key) => {
-    const currentVal = object[key];
-    if (currentVal === null || currentVal === undefined || currentVal === "") {
-      object[key] = value;
-    }
+  if (!(object && !(value === undefined || value === null))) return;
+  if (!Array.isArray(object)) {
+    replaceNullWithValue({ object: [object], value });
+    return;
+  }
+  object.forEach((item) => {
+    Object.keys(item).forEach((key) => {
+      const currentVal = item[key];
+      if (
+        currentVal === null ||
+        currentVal === undefined ||
+        currentVal === ''
+      ) {
+        item[key] = value;
+      }
+    });
   });
 };

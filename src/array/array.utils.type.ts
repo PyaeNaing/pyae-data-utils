@@ -14,8 +14,14 @@ export interface INarrowArray {
 }
 
 export interface IReplaceNullWithValue {
-  object: {
-    [key: string]: any;
-  };
+  object:
+    | [
+        {
+          [key: string]: any;
+        }
+      ]
+    | {
+        [key: string]: any;
+      };
   value: any;
 }
