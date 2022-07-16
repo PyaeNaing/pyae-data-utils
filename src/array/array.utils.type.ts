@@ -3,7 +3,7 @@ export interface IFilters {
     values: string[];
   };
 }
-export interface IFilterArray {
+export interface IFilterOutArray {
   data: object[];
   filters: IFilters;
 }
@@ -24,4 +24,9 @@ export interface IReplaceNullWithValue {
         [key: string]: any;
       };
   value: any;
+}
+
+export interface IContainsInObject {
+  data: object[];
+  contains: string;
 }

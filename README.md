@@ -18,9 +18,16 @@ This function is to narrow down data from array to show the one you desires
 `replaceNullWithValue`
 This function takes in an object / array of object and replace the null property of object with the value you provide
 
+`containsInObject`
+This function will return objects that contains the string and filter out the rest
+
 ---
 
 ### Version update note
+
+##### v1.0.3
+`containsInObject` function added.
+changed the babel plugin form commonjs to umd.
 
 ##### v1.0.2
 

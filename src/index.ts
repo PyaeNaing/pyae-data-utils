@@ -1,6 +1,7 @@
 export { IFilters } from "./array/array.utils.type";
 export {
-  filterObjectArray,
+  containsInObject,
+  filterOutObjectArray,
   narrowObjectArray,
   replaceNullWithValue,
 } from "./array/array.utils";
